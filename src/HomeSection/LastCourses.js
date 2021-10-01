@@ -26,7 +26,7 @@ export class LastCourses extends Component {
        const z = lengthArr-3
        const c1=this.state.courses.map((cous) => {
                
-        if(cous.id === x){
+        if(cous.id == x){
      
             return(
                 <Col lg={4} md={4} sm={12} className="cardlast animate__animated  animate__zoomIn" >
@@ -62,7 +62,7 @@ export class LastCourses extends Component {
             )
             
             }
-            if(cous.id === y){
+            if(cous.id == y){
           
                 return(
                     <Col lg={4} md={4} sm={12}  className="cardlast animate__animated  animate__zoomIn">
@@ -97,7 +97,7 @@ export class LastCourses extends Component {
                 
                 }
 
-                if(cous.id === z){
+                if(cous.id == z){
                  
                     return(
                         <Col lg={4} md={4} sm={12} className="cardlast animate__animated  animate__zoomIn">
