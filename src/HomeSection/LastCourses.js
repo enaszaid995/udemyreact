@@ -4,9 +4,7 @@ import '../App.css'
 import "animate.css"
 import axios from 'axios'
 import {Rating, Typography} from '@mui/material';
-// get our fontawesome imports
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { Link } from 'react-router-dom'
 
 export class LastCourses extends Component {
@@ -27,13 +25,12 @@ export class LastCourses extends Component {
        const y = lengthArr-2
        const z = lengthArr-3
        const c1=this.state.courses.map((cous) => {
-        console.log(cous.id)
-        
-        if(cous.id == x){
-            const rate = cous.Rate
+               
+        if(cous.id === x){
+     
             return(
                 <Col lg={4} md={4} sm={12} className="cardlast animate__animated  animate__zoomIn" >
-                    <Card style={{ width: '18rem' , marginLeft:'50px'}}>
+                    <Card style={{ width: '18rem' , marginLeft:'50px'}} key={cous.id}>
                 <Card.Img variant="top" src="logo192.png" />
                 <Card.Body>
                     <Card.Title>{cous.title}</Card.Title>
@@ -65,11 +62,11 @@ export class LastCourses extends Component {
             )
             
             }
-            if(cous.id == y){
-                const rate = cous.Rate
+            if(cous.id === y){
+          
                 return(
                     <Col lg={4} md={4} sm={12}  className="cardlast animate__animated  animate__zoomIn">
-                        <Card style={{ width: '18rem' , marginLeft:'50px'}}>
+                        <Card style={{ width: '18rem' , marginLeft:'50px'}} key={cous.id}>
                     <Card.Img variant="top" src="logo192.png" />
                     <Card.Body>
                         <Card.Title>{cous.title}</Card.Title>
@@ -100,11 +97,11 @@ export class LastCourses extends Component {
                 
                 }
 
-                if(cous.id == z){
-                    const rate = cous.Rate
+                if(cous.id === z){
+                 
                     return(
                         <Col lg={4} md={4} sm={12} className="cardlast animate__animated  animate__zoomIn">
-                            <Card style={{ width: '18rem' , marginLeft:'50px'}}>
+                            <Card style={{ width: '18rem' , marginLeft:'50px'}} key={cous.id}>
                         <Card.Img variant="top" src="logo192.png" />
                         <Card.Body>
                             <Card.Title>{cous.title}</Card.Title>
