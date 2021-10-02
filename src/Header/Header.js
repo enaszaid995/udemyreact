@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 
 export class Header extends Component {
@@ -15,7 +16,9 @@ export class Header extends Component {
 
                     <Nav.Link to="/Home">Home</Nav.Link>
                     <NavDropdown title="Our Courses" id="basic-nav-dropdown">
-                    <NavDropdown.Item to="/WebDevelopment">Web Development</NavDropdown.Item>
+                    <NavDropdown.Item ><Link to="/Web">
+                    Web Development
+                    </Link></NavDropdown.Item>
                     <NavDropdown.Item to="/Android">Android</NavDropdown.Item>
                     <NavDropdown.Item to="/Ios">IOS</NavDropdown.Item>
                     <NavDropdown.Divider />
